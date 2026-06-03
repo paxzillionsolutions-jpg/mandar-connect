@@ -9,7 +9,7 @@ import {
 import { useRouter } from "next/navigation";
 
 interface RequirementCardProps {
-  image: string;
+  image?: string;
   title: string;
   industry: string;
   description: string;
