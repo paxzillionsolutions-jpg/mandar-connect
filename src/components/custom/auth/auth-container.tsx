@@ -1,3 +1,5 @@
+import AppShell from "@/components/custom/layout/app-shell";
+
 interface AuthContainerProps {
   children: React.ReactNode;
 }
@@ -6,14 +8,10 @@ export default function AuthContainer({
   children,
 }: AuthContainerProps) {
   return (
-    <div className="h-screen bg-[#f3efe8] flex justify-center overflow-hidden">
-
-      <div className="w-full max-w-md h-screen bg-[#fcfbf8] overflow-y-auto">
-
+    <AppShell>
+      <div className="h-full overflow-y-auto">
         {children}
-
       </div>
-
-    </div>
+    </AppShell>
   );
 }

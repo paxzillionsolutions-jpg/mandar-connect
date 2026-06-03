@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import AppLogo from "@/components/custom/shared/app-logo";
+import AppShell from "@/components/custom/layout/app-shell";
 
 export default function SplashPage() {
 
@@ -20,10 +21,9 @@ export default function SplashPage() {
   }, [router]);
 
   return (
-    <div className="h-screen bg-[#fcfbf8] flex justify-center overflow-hidden">
+    <AppShell>
 
-      {/* MOBILE SHELL */}
-      <div className="w-full max-w-md h-screen bg-[#fcfbf8] flex flex-col items-center justify-center relative">
+      <div className="h-full flex flex-col items-center justify-center relative">
 
         {/* LOGO */}
         <AppLogo size={92} />
@@ -56,6 +56,6 @@ export default function SplashPage() {
 
       </div>
 
-    </div>
+    </AppShell>
   );
 }
