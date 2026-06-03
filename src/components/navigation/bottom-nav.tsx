@@ -29,7 +29,7 @@ const navItems = [
   },
   {
     label: "Chats",
-    href: "/chat",
+    href: "/chats",
     icon: MessageCircleMore,
   },
   {
