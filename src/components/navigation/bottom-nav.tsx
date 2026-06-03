@@ -40,14 +40,21 @@ const navItems = [
 ];
 
 export default function BottomNav() {
+
   const pathname = usePathname();
+
+  /* HIDE ON CONVERSATION SCREEN */
+  if (pathname.startsWith("/chats/conversation")) {
+    return null;
+  }
 
   return (
     <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md border-t border-[#ebe4d8] bg-[#fcfbf8]/95 backdrop-blur">
-      
+
       <div className="flex items-center justify-around py-3">
 
         {navItems.map((item) => {
+
           const Icon = item.icon;
 
           const active = pathname === item.href;
@@ -62,6 +69,7 @@ export default function BottomNav() {
                   : "text-gray-400"
               }`}
             >
+
               <Icon
                 size={21}
                 strokeWidth={active ? 2.5 : 2}
@@ -74,13 +82,17 @@ export default function BottomNav() {
                     : "font-medium"
                 }`}
               >
+
                 {item.label}
+
               </span>
+
             </Link>
           );
         })}
 
       </div>
+
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default function ChatsPage() {
         showBack={false}
       />
 
-      <ScreenContent className="pb-24">
+      <ScreenContent>
 
         {/* SEARCH + FILTER */}
         <div className="flex items-center gap-3 mb-4">

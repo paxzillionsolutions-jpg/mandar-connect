@@ -23,9 +23,9 @@ export default function ChatCard({
   onClick,
 }: ChatCardProps) {
   return (
-    <button
+    <div
       onClick={onClick}
-      className="w-full text-left px-1 py-3 active:bg-[#f8f5ef] transition"
+      className="w-full cursor-pointer px-1 py-3 active:bg-[#f8f5ef] transition"
     >
 
       <div className="flex items-start gap-3">
@@ -109,6 +109,6 @@ export default function ChatCard({
 
       </div>
 
-    </button>
+    </div>
   );
 }
