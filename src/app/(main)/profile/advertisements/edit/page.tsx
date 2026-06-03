@@ -12,38 +12,37 @@ import PrimaryInput from "@/components/custom/shared/primary-input";
 import PrimarySelect from "@/components/custom/shared/primary-select";
 import PrimaryTextarea from "@/components/custom/shared/primary-textarea";
 
-export default function RequirementPage() {
+export default function EditAdvertisementPage() {
   return (
     <ScreenLayout>
 
       <AppTopbar
-        title="Post Requirement"
-        subtitle="Find suppliers or business opportunities"
+        title="Edit Advertisement"
       />
 
       <ScreenContent className="space-y-5 pb-28">
 
-        {/* REQUIREMENT DETAILS */}
+        {/* AD DETAILS */}
         <div className="bg-white border border-[#ece4d8] rounded-3xl p-5 shadow-sm space-y-5">
 
           <div>
 
             <h2 className="text-[15px] font-bold text-[#1f2937]">
-              Requirement Details
+              Advertisement Details
             </h2>
 
             <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
-              Describe what your business is looking for.
+              Update your business or promotional advertisement.
             </p>
 
           </div>
 
           <PrimaryInput
-            placeholder="Requirement Title"
+            placeholder="Business or Product Title"
           />
 
           <PrimaryTextarea
-            placeholder="Describe your requirement..."
+            placeholder="Describe your business or offer..."
           />
 
           <PrimarySelect
@@ -58,11 +57,11 @@ export default function RequirementPage() {
           <div>
 
             <h2 className="text-[15px] font-bold text-[#1f2937]">
-              Requirement Location
+              Business Location
             </h2>
 
             <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
-              Select where you want suppliers or businesses from.
+              Update your business location details.
             </p>
 
           </div>
@@ -77,23 +76,23 @@ export default function RequirementPage() {
 
         </div>
 
-        {/* REFERENCE IMAGE */}
+        {/* IMAGE */}
         <div className="bg-white border border-[#ece4d8] rounded-3xl p-5 shadow-sm space-y-5">
 
           <div>
 
             <h2 className="text-[15px] font-bold text-[#1f2937]">
-              Reference Image
+              Advertisement Image
             </h2>
 
             <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
-              Upload sample, product or reference images if available.
+              Update promotional or product images.
             </p>
 
           </div>
 
           <UploadBox
-            title="Upload Reference Image"
+            title="Upload Advertisement Image"
           />
 
         </div>
@@ -103,7 +102,7 @@ export default function RequirementPage() {
       <BottomAction>
 
         <PrimaryButton
-          text="Post Requirement"
+          text="Save Changes"
         />
 
       </BottomAction>

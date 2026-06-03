@@ -12,13 +12,12 @@ import PrimaryInput from "@/components/custom/shared/primary-input";
 import PrimarySelect from "@/components/custom/shared/primary-select";
 import PrimaryTextarea from "@/components/custom/shared/primary-textarea";
 
-export default function RequirementPage() {
+export default function EditRequirementPage() {
   return (
     <ScreenLayout>
 
       <AppTopbar
-        title="Post Requirement"
-        subtitle="Find suppliers or business opportunities"
+        title="Edit Requirement"
       />
 
       <ScreenContent className="space-y-5 pb-28">
@@ -33,7 +32,7 @@ export default function RequirementPage() {
             </h2>
 
             <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
-              Describe what your business is looking for.
+              Update your business requirement details.
             </p>
 
           </div>
@@ -62,7 +61,7 @@ export default function RequirementPage() {
             </h2>
 
             <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
-              Select where you want suppliers or businesses from.
+              Update preferred supplier or business location.
             </p>
 
           </div>
@@ -87,7 +86,7 @@ export default function RequirementPage() {
             </h2>
 
             <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
-              Upload sample, product or reference images if available.
+              Update reference or sample images if needed.
             </p>
 
           </div>
@@ -103,7 +102,7 @@ export default function RequirementPage() {
       <BottomAction>
 
         <PrimaryButton
-          text="Post Requirement"
+          text="Save Changes"
         />
 
       </BottomAction>

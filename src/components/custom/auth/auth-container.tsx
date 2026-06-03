@@ -9,7 +9,7 @@ export default function AuthContainer({
 }: AuthContainerProps) {
   return (
     <AppShell>
-      <div className="h-full overflow-y-auto">
+      <div className="h-full overflow-y-auto scrollbar-hide">
         {children}
       </div>
     </AppShell>

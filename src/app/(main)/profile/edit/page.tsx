@@ -1,53 +1,59 @@
 "use client";
 
-import UploadBox from "@/components/custom/shared/upload-box";
-
 import AppTopbar from "@/components/custom/layout/app-topbar";
 import BottomAction from "@/components/custom/layout/bottom-action";
 import ScreenContent from "@/components/custom/layout/screen-content";
 import ScreenLayout from "@/components/custom/layout/screen-layout";
 
+import UploadBox from "@/components/custom/shared/upload-box";
 import PrimaryButton from "@/components/custom/shared/primary-button";
 import PrimaryInput from "@/components/custom/shared/primary-input";
 import PrimarySelect from "@/components/custom/shared/primary-select";
 import PrimaryTextarea from "@/components/custom/shared/primary-textarea";
 
-export default function AdPage() {
+export default function EditProfilePage() {
   return (
     <ScreenLayout>
 
       <AppTopbar
-        title="Create Advertisement"
-        subtitle="Promote your business or services"
+        title="Edit Profile"
       />
 
-      <ScreenContent className="space-y-5 pb-28">
+      <ScreenContent className="space-y-6 pb">
 
-        {/* AD DETAILS */}
+        {/* BUSINESS IDENTITY */}
         <div className="bg-white border border-[#ece4d8] rounded-3xl p-5 shadow-sm space-y-5">
 
           <div>
 
             <h2 className="text-[15px] font-bold text-[#1f2937]">
-              Advertisement Details
+              Business Identity
             </h2>
 
             <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
-              Promote your business, services or products to the community.
+              Build your professional business presence.
             </p>
 
           </div>
 
-          <PrimaryInput
-            placeholder="Business or Product Title"
+          <UploadBox
+            title="Upload Business Logo"
           />
 
-          <PrimaryTextarea
-            placeholder="Describe your business or offer..."
+          <PrimaryInput
+            placeholder="Business Name"
+          />
+
+          <PrimaryInput
+            placeholder="Contact Person Name"
           />
 
           <PrimarySelect
             placeholder="Select Industry"
+          />
+
+          <PrimarySelect
+            placeholder="Select Business Type"
           />
 
         </div>
@@ -75,25 +81,68 @@ export default function AdPage() {
             placeholder="Select City"
           />
 
+          <PrimaryTextarea
+            placeholder="Full Business Address"
+          />
+
         </div>
 
-        {/* ADVERTISEMENT IMAGE */}
+        {/* CONTACT DETAILS */}
         <div className="bg-white border border-[#ece4d8] rounded-3xl p-5 shadow-sm space-y-5">
 
           <div>
 
             <h2 className="text-[15px] font-bold text-[#1f2937]">
-              Advertisement Image
+              Contact Details
             </h2>
 
             <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
-              Upload product, service or promotional images.
+              Businesses will use these details to connect with you.
             </p>
 
           </div>
 
-          <UploadBox
-            title="Upload Advertisement Image"
+          {/* MOBILE INPUT */}
+          <div className="h-14 bg-[#fcfbf8] border border-[#e7dfd4] rounded-2xl px-4 flex items-center">
+
+            <span className="text-[14px] font-semibold text-[#1f2937]">
+              +91
+            </span>
+
+            <div className="w-px h-5 bg-[#e7dfd4] mx-3" />
+
+            <input
+              type="tel"
+              placeholder="Enter mobile number"
+              className="flex-1 bg-transparent outline-none text-[14px] text-[#1f2937] placeholder:text-gray-400"
+            />
+
+          </div>
+
+          <PrimaryInput
+            placeholder="Email Address"
+            type="email"
+          />
+
+        </div>
+
+        {/* BUSINESS DESCRIPTION */}
+        <div className="bg-white border border-[#ece4d8] rounded-3xl p-5 shadow-sm space-y-5">
+
+          <div>
+
+            <h2 className="text-[15px] font-bold text-[#1f2937]">
+              Business Description
+            </h2>
+
+            <p className="text-[12px] text-gray-500 mt-1 leading-relaxed">
+              Describe your business, services or products.
+            </p>
+
+          </div>
+
+          <PrimaryTextarea
+            placeholder="Write business description..."
           />
 
         </div>
@@ -103,7 +152,7 @@ export default function AdPage() {
       <BottomAction>
 
         <PrimaryButton
-          text="Publish Advertisement"
+          text="Save Profile"
         />
 
       </BottomAction>
